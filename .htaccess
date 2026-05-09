@@ -1,0 +1,38 @@
+# Deshabilitar listado de directorios
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Proxy WebSocket para Laravel Reverb (/app/)
+    # LiteSpeed soporta proxy mediante reglas de reescritura
+    RewriteCond %{REQUEST_URI} ^/app/
+    RewriteCond %{HTTP:Upgrade} =websocket [NC]
+    RewriteRule ^(.*)$ http://127.0.0.1:8080%{REQUEST_URI} [P,L]
+    
+    # También manejar conexiones HTTP normales a /app/ (para compatibilidad)
+    RewriteCond %{REQUEST_URI} ^/app/
+    RewriteRule ^(.*)$ http://127.0.0.1:8080%{REQUEST_URI} [P,L]
+    
+    # Redirigir todo lo demás al directorio public/
+    # Si la URI no comienza con /public/ y no es /app/, redirigirla
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_URI} !^/app/
+    RewriteRule ^(.*)$ /public/$1 [L]
+</IfModule>
+
+# Proteger archivos sensibles
+<FilesMatch "^(\.env|\.git|composer\.(json|lock)|package(-lock)?\.json|artisan)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Proteger directorios sensibles
+<IfModule mod_rewrite.c>
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|tests|vendor|node_modules|\.git|\.cursor)/ - [F,L]
+</IfModule>

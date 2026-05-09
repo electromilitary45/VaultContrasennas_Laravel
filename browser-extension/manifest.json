@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "OCIANN Vault",
+  "version": "1.0.0",
+  "description": "Acceso rápido a tu vault OCIANN: copiar credenciales y autocompletar en formularios.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "OCIANN Vault"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
