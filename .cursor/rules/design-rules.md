@@ -1,4 +1,4 @@
-# Reglas de Diseño - OCIANN Vault
+# Reglas de Diseño - PassVault
 
 ## Estilo Visual: Minimalista tipo Apple
 

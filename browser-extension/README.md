@@ -1,6 +1,6 @@
-# OCIANN Vault - Extensión para Chrome
+# PassVault - Extensión para Chrome
 
-Extensión de navegador que se integra 100% con la aplicación OCIANN Vault: misma sesión, mismos datos y permisos.
+Extensión de navegador que se integra 100% con la aplicación PassVault: misma sesión, mismos datos y permisos.
 
 ## Requisitos
 
@@ -17,7 +17,7 @@ Extensión de navegador que se integra 100% con la aplicación OCIANN Vault: mis
 
 ## Configuración
 
-- **Por defecto** la extensión apunta al dominio de producción (`https://vault.ocianncloud.com`) o a la URL inyectada al descargar desde tu instancia.
+- **Por defecto** la extensión apunta al dominio de producción (`https://passvault.example.com`) o a la URL inyectada al descargar desde tu instancia.
 - **Opciones de desarrollador:** en Ajustes (enlace "Ajustes" en la vista principal o en "Iniciar sesión"), activa "Opciones de desarrollador" para mostrar el campo "URL del vault" y poder usar localhost u otra URL (ej. `http://localhost:8001`). La opción y la URL se guardan en `chrome.storage.local`.
 
 ## Funcionalidades
@@ -27,7 +27,7 @@ Extensión de navegador que se integra 100% con la aplicación OCIANN Vault: mis
 - **Vistas:** Lista principal, pantalla "Iniciar sesión" si no hay sesión, y panel **Ajustes** (tema, actualizar extensión, opciones de desarrollador).
 - **Badge:** En el icono de la extensión se muestra el número de items del vault (o se oculta si no hay sesión). Se actualiza al abrir el popup.
 - **Actualización:** En Ajustes, "Actualizar extensión" comprueba la versión del servidor (`GET /api/extension/version`). Si hay versión nueva, ofrece descargar el ZIP desde la página del vault.
-- **Autofill:** En páginas con formulario de login (campo password + usuario/email), aparece el botón "Rellenar con OCIANN Vault". Al hacer clic se elige un item y se rellenan los campos.
+- **Autofill:** En páginas con formulario de login (campo password + usuario/email), aparece el botón "Rellenar con PassVault". Al hacer clic se elige un item y se rellenan los campos.
 
 ## API consumida
 

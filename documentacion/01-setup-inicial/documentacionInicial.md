@@ -1,4 +1,4 @@
-# OCIANN Vault (Open Source Password Vault) — Documento de Arranque
+# PassVault (Open Source Password Vault) — Documento de Arranque
 
 ## 1. Objetivo
 
@@ -493,7 +493,7 @@ DB_PASSWORD=tu_contraseña
 
 **Aplicación:**
 ```env
-APP_NAME="OCIANN Vault"
+APP_NAME="PassVault"
 APP_ENV=local
 APP_KEY=  # Se genera con php artisan key:generate
 APP_DEBUG=true

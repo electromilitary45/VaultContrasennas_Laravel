@@ -1,4 +1,4 @@
-# OCIANN Vault
+# PassVault
 
 > Open Source Password Vault - Un gestor de contraseñas seguro y open source
 
@@ -10,7 +10,7 @@
 
 ## 📋 Descripción
 
-OCIANN Vault es una aplicación web open source para gestionar contraseñas y secretos de forma segura. Diseñada con Laravel y siguiendo principios de seguridad por diseño, permite organizar, compartir y auditar accesos a credenciales de manera eficiente.
+PassVault es una aplicación web open source para gestionar contraseñas y secretos de forma segura. Diseñada con Laravel y siguiendo principios de seguridad por diseño, permite organizar, compartir y auditar accesos a credenciales de manera eficiente.
 
 ## ✨ Características Principales
 
@@ -339,7 +339,7 @@ Las contribuciones son bienvenidas. Por favor:
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
 ## 👥 Autores
-- **EMPRESA** - *OCIANN*
+- **Derek** - *Derek Sebastian Leiva Villalobos*
 - **Tu Nombre** - *Derek Sebastian Leiva Villalobos*
 
 ## 🙏 Agradecimientos

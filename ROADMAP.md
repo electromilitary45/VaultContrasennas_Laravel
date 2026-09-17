@@ -1,4 +1,4 @@
-# Roadmap - OCIANN Vault
+# Roadmap - PassVault
 
 Plan de producto y visión futura del proyecto. Funcionalidades planificadas, mejoras y objetivos a largo plazo.
 
@@ -10,7 +10,7 @@ Plan de producto y visión futura del proyecto. Funcionalidades planificadas, me
 
 ## 🎯 Visión del Producto
 
-OCIANN Vault aspira a ser una solución completa y segura para la gestión de contraseñas y secretos, con énfasis en colaboración, seguridad y facilidad de uso.
+PassVault aspira a ser una solución completa y segura para la gestión de contraseñas y secretos, con énfasis en colaboración, seguridad y facilidad de uso.
 
 ---
 

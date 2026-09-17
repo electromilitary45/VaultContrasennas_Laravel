@@ -1,6 +1,6 @@
 # Decisiones SaaS Multi-Tenant — MVP
 
-Documento de decisiones para convertir OCIANN Vault en una aplicación multi-tenant donde cada **organización/empresa** tiene su propio super admin y su propio espacio de datos, todo bajo una única plataforma.
+Documento de decisiones para convertir PassVault en una aplicación multi-tenant donde cada **organización/empresa** tiene su propio super admin y su propio espacio de datos, todo bajo una única plataforma.
 
 **Última actualización:** 2026-01-24  
 **Estado:** Definición de producto — previo a implementación

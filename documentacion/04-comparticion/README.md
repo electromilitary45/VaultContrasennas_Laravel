@@ -1,4 +1,4 @@
-# Sistema de Compartición - OCIANN Vault
+# Sistema de Compartición - PassVault
 
 Documentación del sistema de compartición de items del vault con usuarios y grupos.
 

@@ -1,4 +1,4 @@
-# Sistema de Notificaciones e Invitaciones - OCIANN Vault
+# Sistema de Notificaciones e Invitaciones - PassVault
 
 Documentación del sistema de notificaciones en tiempo real (WebSockets) e invitaciones/solicitudes de acceso a grupos.
 

@@ -1,4 +1,4 @@
-# Reglas de Documentación - OCIANN Vault
+# Reglas de Documentación - PassVault
 
 ## Estructura de Documentación
 

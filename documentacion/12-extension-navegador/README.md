@@ -1,6 +1,6 @@
-# Extensión de navegador - OCIANN Vault
+# Extensión de navegador - PassVault
 
-Documentación del plan y desarrollo de la extensión de navegador (Chrome y futuramente Firefox) para OCIANN Vault: MVP, inspiración en Bitwarden y otras apps, sección Integraciones en la web, versionado y actualización automática.
+Documentación del plan y desarrollo de la extensión de navegador (Chrome y futuramente Firefox) para PassVault: MVP, inspiración en Bitwarden y otras apps, sección Integraciones en la web, versionado y actualización automática.
 
 ## Contenido del módulo
 
@@ -12,7 +12,7 @@ Documentación del plan y desarrollo de la extensión de navegador (Chrome y fut
 - **Repositorio extensión:** Carpeta `browser-extension/` en el mismo repo (monorepo).
 - **Integración 100% con la app main:** La extensión no duplica lógica: consume los mismos datos y permisos que la web (mismo usuario, organización, VaultService, policies). Ver plan, sección 3.
 - **Backend:** Endpoints JSON: `GET /api/extension/vault/items`, `GET /api/extension/vault/items/{id}` (controlador `ExtensionApiController`), `GET /api/extension/version` (versión y URL de descarga). Protegidos por `auth` + `ensure-password-changed` (salvo `version`, público). CORS para `chrome-extension://` (middleware `ExtensionCorsMiddleware`).
-- **Extensión:** Manifest V3; popup con lista, búsqueda, copiar usuario/contraseña, tema (claro/oscuro/sistema), vistas (principal, login requerido, Ajustes), estado de carga, comprobación de actualización desde el vault; **badge** en el icono (número de items, o vacío sin sesión); content script (detección de formularios de login y botón "Rellenar con OCIANN Vault").
+- **Extensión:** Manifest V3; popup con lista, búsqueda, copiar usuario/contraseña, tema (claro/oscuro/sistema), vistas (principal, login requerido, Ajustes), estado de carga, comprobación de actualización desde el vault; **badge** en el icono (número de items, o vacío sin sesión); content script (detección de formularios de login y botón "Rellenar con PassVault").
 - **Web:** Página **Integraciones** (`/integrations`) con tarjeta de la extensión Chrome, versión actual (timestamp en `version.txt`), descarga ZIP y pasos de instalación.
 
 ## Relación con el proyecto

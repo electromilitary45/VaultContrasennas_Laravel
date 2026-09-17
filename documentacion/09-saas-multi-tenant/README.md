@@ -1,6 +1,6 @@
 # SaaS Multi-Tenant
 
-Documentación del modelo **multi-tenant** para OCIANN Vault: cada organización/empresa tiene su propio super admin y su espacio de datos, bajo una única plataforma.
+Documentación del modelo **multi-tenant** para PassVault: cada organización/empresa tiene su propio super admin y su espacio de datos, bajo una única plataforma.
 
 **Estado:** MVP multi-tenant completado (Fases 1–6). Dashboard admin con métricas por org; Seguridad y Configuración solo para platform super admin.
 

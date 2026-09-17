@@ -1,4 +1,4 @@
-# Auditoría - OCIANN Vault
+# Auditoría - PassVault
 
 Documentación del sistema de auditoría y registro de eventos.
 

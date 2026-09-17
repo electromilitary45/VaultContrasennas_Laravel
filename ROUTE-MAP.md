@@ -1,4 +1,4 @@
-# Route Map - OCIANN Vault
+# Route Map - PassVault
 
 Mapa técnico del proyecto: estado de implementación, migraciones, controladores, servicios y componentes.
 
@@ -310,7 +310,7 @@ Mapa técnico del proyecto: estado de implementación, migraciones, controladore
 ### 32. Extensión de navegador (MVP base) ✅
 - [x] API para extensión: `ExtensionApiController` con `items()` y `show()`; rutas `GET /api/extension/vault/items`, `GET /api/extension/vault/items/{id}` (auth + ensure-password-changed); reutiliza `VaultService` y `VaultItemPolicy`.
 - [x] CORS para extensión: middleware `ExtensionCorsMiddleware` (origen `chrome-extension://...`, credenciales).
-- [x] Carpeta `browser-extension/`: Manifest V3, popup (lista, búsqueda, copiar usuario/contraseña), content script (detección de login y botón "Rellenar con OCIANN Vault").
+- [x] Carpeta `browser-extension/`: Manifest V3, popup (lista, búsqueda, copiar usuario/contraseña), content script (detección de login y botón "Rellenar con PassVault").
 - [x] Página **Integraciones** (`/integrations`), entrada en la navegación, tarjeta extensión Chrome con versión e instalación manual.
 - [x] `public/integrations/browser-extension.json` con versión 1.0.0. Ver [`documentacion/12-extension-navegador/`](documentacion/12-extension-navegador/).
 

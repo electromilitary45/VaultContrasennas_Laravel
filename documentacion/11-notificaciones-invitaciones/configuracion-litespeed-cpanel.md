@@ -19,7 +19,7 @@ Si tienes acceso al **LiteSpeed WebAdmin** desde cPanel:
 
 ### Paso 2: Configurar Proxy para WebSockets
 
-1. Ve a **Virtual Hosts** → Selecciona tu dominio (`vault.ocianncloud.com`)
+1. Ve a **Virtual Hosts** → Selecciona tu dominio (`passvault.example.com`)
 2. Ve a la sección **"Script Handler"** o **"Context"**
 3. Crea un nuevo contexto con estas configuraciones:
 
@@ -76,11 +76,11 @@ netstat -tulpn | grep 8080
 
 ### 2. Probar conexión WebSocket
 
-Abre la consola del navegador en `https://vault.ocianncloud.com` y verifica que no hay errores de conexión WebSocket.
+Abre la consola del navegador en `https://passvault.example.com` y verifica que no hay errores de conexión WebSocket.
 
 Deberías ver algo como:
 ```
-Connecting to wss://vault.ocianncloud.com/app/...
+Connecting to wss://passvault.example.com/app/...
 Connected to Reverb
 ```
 
@@ -103,7 +103,7 @@ BROADCAST_CONNECTION=reverb
 REVERB_APP_ID=984099
 REVERB_APP_KEY=0ilihojpz9kt4m8ftfrv
 REVERB_APP_SECRET=hwkm3cr4orqffx9pmm33
-REVERB_HOST=vault.ocianncloud.com
+REVERB_HOST=passvault.example.com
 REVERB_PORT=8080
 REVERB_SCHEME=https
 

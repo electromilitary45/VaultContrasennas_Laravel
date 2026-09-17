@@ -1,10 +1,10 @@
-# Seguridad - OCIANN Vault
+# Seguridad - PassVault
 
 Documentación del sistema de seguridad, cifrado y protección de datos.
 
 ## 📋 Descripción
 
-El sistema de seguridad de OCIANN Vault implementa múltiples capas de protección para garantizar la confidencialidad e integridad de los secretos almacenados.
+El sistema de seguridad de PassVault implementa múltiples capas de protección para garantizar la confidencialidad e integridad de los secretos almacenados.
 
 ## ✨ Funcionalidades Implementadas
 

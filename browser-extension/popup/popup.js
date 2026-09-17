@@ -1,11 +1,11 @@
 /**
- * Popup OCIANN Vault - Consume API con sesión web (credentials: 'include').
+ * Popup PassVault - Consume API con sesión web (credentials: 'include').
  * Por defecto usa el dominio de producción; la URL se puede cambiar en Opciones de desarrollador.
  * Soporta tema claro/oscuro (Bootstrap data-bs-theme).
  */
 
 const DEFAULT_VAULT_URL = '__VAULT_BASE_URL__';
-const PRODUCTION_VAULT_URL = 'https://vault.ocianncloud.com';
+const PRODUCTION_VAULT_URL = 'https://passvault.example.com';
 const THEME_KEY = 'theme';
 
 function getInjectedDefaultUrl() {

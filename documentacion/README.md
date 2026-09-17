@@ -1,4 +1,4 @@
-# Documentación del Proyecto - OCIANN Vault
+# Documentación del Proyecto - PassVault
 
 Esta carpeta contiene toda la documentación del proyecto organizada por módulos.
 

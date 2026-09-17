@@ -1,5 +1,5 @@
 /**
- * Content script: detecta formularios de login y ofrece rellenar con OCIANN Vault.
+ * Content script: detecta formularios de login y ofrece rellenar con PassVault.
  * Para rellenar necesita que el usuario haya iniciado sesión en una pestaña del vault
  * (la extensión usa la misma sesión vía cookies en fetch con credentials).
  */
@@ -49,7 +49,7 @@ function findLoginFields() {
 function createFillButton(callback) {
   const btn = document.createElement('button');
   btn.type = 'button';
-  btn.textContent = 'Rellenar con OCIANN Vault';
+  btn.textContent = 'Rellenar con PassVault';
   btn.style.cssText = 'margin-top:8px;padding:6px 12px;font-size:13px;background:#0071e3;color:#fff;border:none;border-radius:6px;cursor:pointer;';
   btn.addEventListener('click', callback);
   return btn;
@@ -60,10 +60,10 @@ function injectFillUI() {
   if (!login) return;
 
   const { form, usernameInput, passwordInput } = login;
-  if (document.querySelector('[data-ociann-vault-injected]')) return;
+  if (document.querySelector('[data-passvault-injected]')) return;
 
   const wrap = document.createElement('div');
-  wrap.setAttribute('data-ociann-vault-injected', '1');
+  wrap.setAttribute('data-passvault-injected', '1');
   wrap.style.marginTop = '8px';
 
   const btn = createFillButton(async () => {

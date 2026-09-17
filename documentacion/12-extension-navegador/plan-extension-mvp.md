@@ -1,6 +1,6 @@
-# Plan: Extensión de navegador OCIANN Vault (Open Source)
+# Plan: Extensión de navegador PassVault (Open Source)
 
-Plan de producto y técnico para una extensión de navegador open source que se integre con OCIANN Vault, con sección Integraciones en la web, versionado y actualización automática.
+Plan de producto y técnico para una extensión de navegador open source que se integre con PassVault, con sección Integraciones en la web, versionado y actualización automática.
 
 ---
 
@@ -55,7 +55,7 @@ La extensión **no duplica lógica ni datos**: consume exactamente lo que ya tie
 
 | Opción | Cómo funciona | Ventaja |
 |--------|----------------|---------|
-| **A. Sesión (mismo dominio)** | La extensión tiene permiso de host sobre el dominio del vault (ej. `https://vault.ocianncloud.com`). El usuario inicia sesión (y 2FA, cambio de contraseña si aplica) en una pestaña del vault. La extensión hace `fetch(url, { credentials: 'include' })` a ese mismo dominio y reutiliza las cookies de sesión. | No requiere API ni tokens; mismos middleware `auth`, `ensure-password-changed` que la web. |
+| **A. Sesión (mismo dominio)** | La extensión tiene permiso de host sobre el dominio del vault (ej. `https://passvault.example.com`). El usuario inicia sesión (y 2FA, cambio de contraseña si aplica) en una pestaña del vault. La extensión hace `fetch(url, { credentials: 'include' })` a ese mismo dominio y reutiliza las cookies de sesión. | No requiere API ni tokens; mismos middleware `auth`, `ensure-password-changed` que la web. |
 | **B. Token API (futuro)** | Se añade Laravel Sanctum (o similar). En la web, en Integraciones, el usuario genera un token "Para la extensión". La extensión guarda el token y lo envía en `Authorization: Bearer ...`. El backend identifica al usuario y usa los mismos servicios. | La extensión funciona aunque el usuario no tenga el vault abierto en una pestaña. |
 
 **Recomendación:** Implementar primero **Opción A** (endpoints JSON que requieran la misma sesión web). Así la extensión queda 100% integrada sin tocar el modelo de auth actual. Opción B se puede añadir después.
@@ -95,7 +95,7 @@ La aplicación actual no tiene `routes/api.php` ni Sanctum. Para integración 10
 | Popup con lista/búsqueda | Ver items del vault (título, usuario, tipo); búsqueda por texto | ✅ |
 | Copiar usuario / contraseña | Clic en item → copiar al portapapeles (y opcional “pegar en campo activo”) | ✅ |
 | Auto-fill en formularios | Detectar páginas de login y ofrecer rellenar con un item elegido | ✅ |
-| Guardar nuevo login | Tras enviar un formulario, oferta “Guardar en OCIANN Vault” | ✅ Opcional |
+| Guardar nuevo login | Tras enviar un formulario, oferta “Guardar en PassVault” | ✅ Opcional |
 | Generador de contraseñas | En popup y/o en campos password (insertar generada) | ✅ Opcional |
 | Badge (icono) | Número de items o candado (bloqueado) | ✅ |
 | Autenticación en extensión | Login con usuario/contraseña (y 2FA si aplica) o reutilizar sesión web | ✅ |
@@ -124,13 +124,13 @@ Objetivo: extensión usable y publicable, con integración básica al vault y a 
 
 3. **Auto-fill**
    - Content script que detecte formularios con al menos un campo tipo `password` y uno de usuario/email.
-   - Mostrar icono o botón “Rellenar con OCIANN Vault”: abre selector de item y rellena los campos.
+   - Mostrar icono o botón “Rellenar con PassVault”: abre selector de item y rellena los campos.
 
 4. **Badge**
    - Mostrar en el icono de la extensión un número (cantidad de items) o un estado (ej. “—” si no hay sesión).
 
 5. **Guardar nuevo login (opcional en MVP)**
-   - Tras enviar un formulario de login, si la página coincide con reglas básicas, mostrar mensaje “¿Guardar este inicio de sesión en OCIANN Vault?” y abrir la web del vault en “crear item” con datos pre-rellenados (vía query params o API).
+   - Tras enviar un formulario de login, si la página coincide con reglas básicas, mostrar mensaje “¿Guardar este inicio de sesión en PassVault?” y abrir la web del vault en “crear item” con datos pre-rellenados (vía query params o API).
 
 6. **Generador de contraseñas (opcional en MVP)**
    - En el popup, botón “Generar contraseña” que genere una segura y la copie (y opcionalmente la inserte en el campo activo si es un input password).

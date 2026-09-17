@@ -1,10 +1,10 @@
-# Autenticación - OCIANN Vault
+# Autenticación - PassVault
 
 Documentación del sistema de autenticación y seguridad de acceso.
 
 ## 📋 Descripción
 
-El sistema de autenticación de OCIANN Vault está basado en Laravel Breeze y proporciona autenticación segura con soporte para autenticación de dos factores (2FA) a nivel de usuario.
+El sistema de autenticación de PassVault está basado en Laravel Breeze y proporciona autenticación segura con soporte para autenticación de dos factores (2FA) a nivel de usuario.
 
 ## ✨ Funcionalidades Implementadas
 

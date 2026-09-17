@@ -1,4 +1,4 @@
-# Configuración de Reverb en Producción - OCIANN Vault
+# Configuración de Reverb en Producción - PassVault
 
 **Última actualización:** 2026-01-25
 
@@ -35,7 +35,7 @@ VITE_REVERB_SCHEME="${REVERB_SCHEME}"
 
 **Importante:**
 - Usa valores diferentes a desarrollo (genera nuevas claves)
-- `REVERB_HOST` debe ser tu dominio real (ej: `vault.ocianncloud.com`)
+- `REVERB_HOST` debe ser tu dominio real (ej: `passvault.example.com`)
 - `REVERB_SCHEME` debe ser `https` en producción
 - `REVERB_PORT` puede ser `8080` (interno) o `443` si usas HTTPS directo
 
@@ -223,7 +223,7 @@ Agregar al archivo de configuración de tu sitio (ej: `/etc/nginx/sites-availabl
 server {
     listen 80;
     listen [::]:80;
-    server_name vault.ocianncloud.com;
+    server_name passvault.example.com;
     
     # Redirigir HTTP a HTTPS
     return 301 https://$server_name$request_uri;
@@ -232,14 +232,14 @@ server {
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
-    server_name vault.ocianncloud.com;
+    server_name passvault.example.com;
     
     root /home/vault/public_html/public;
     index index.php;
     
     # SSL Configuration (ajustar rutas)
-    ssl_certificate /etc/letsencrypt/live/vault.ocianncloud.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/vault.ocianncloud.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/passvault.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/passvault.example.com/privkey.pem;
     
     # Proxy WebSocket para Reverb
     location /app/ {
@@ -304,13 +304,13 @@ Agregar al archivo de configuración (ej: `/etc/apache2/sites-available/vault.co
 
 ```apache
 <VirtualHost *:443>
-    ServerName vault.ocianncloud.com
+    ServerName passvault.example.com
     DocumentRoot /home/vault/public_html/public
     
     # SSL Configuration
     SSLEngine on
-    SSLCertificateFile /etc/letsencrypt/live/vault.ocianncloud.com/fullchain.pem
-    SSLCertificateKeyFile /etc/letsencrypt/live/vault.ocianncloud.com/privkey.pem
+    SSLCertificateFile /etc/letsencrypt/live/passvault.example.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/passvault.example.com/privkey.pem
     
     # Proxy WebSocket para Reverb
     <Location "/app/">
@@ -437,7 +437,7 @@ O usar herramienta como `wscat`:
 
 ```bash
 npm install -g wscat
-wscat -c wss://vault.ocianncloud.com/app/your-key
+wscat -c wss://passvault.example.com/app/your-key
 ```
 
 ### Problemas Comunes

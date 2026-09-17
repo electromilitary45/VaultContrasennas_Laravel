@@ -1,4 +1,4 @@
-# Orden Recomendado de Commits - OCIANN Vault
+# Orden Recomendado de Commits - PassVault
 
 Este documento describe el orden recomendado para hacer commits incrementales y valiosos durante el desarrollo del proyecto.
 
@@ -15,7 +15,7 @@ Este documento describe el orden recomendado para hacer commits incrementales y 
 - Configuración `.env` con conexión MySQL
 - Generación de `APP_KEY`
 - Configuración de base de datos `vault_contrasenna`
-- Actualización de `APP_NAME` a "OCIANN Vault"
+- Actualización de `APP_NAME` a "PassVault"
 
 ### Commit 3: Instalación y configuración de Bootstrap ✅
 **Estado:** Completado

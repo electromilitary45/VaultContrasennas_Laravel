@@ -35,7 +35,7 @@ class SyncExtensionVersionCommand extends Command
         $this->info("Timestamp escrito: {$timestamp} → browser-extension/version.txt");
 
         $manifestPath = base_path('browser-extension/manifest.json');
-        $name = 'OCIANN Vault';
+        $name = 'PassVault';
         if (File::exists($manifestPath)) {
             $manifest = json_decode(File::get($manifestPath), true);
             if (! empty($manifest['name'])) {

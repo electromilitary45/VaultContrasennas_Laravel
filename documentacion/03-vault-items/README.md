@@ -1,4 +1,4 @@
-# Vault Items - OCIANN Vault
+# Vault Items - PassVault
 
 Documentación del sistema de gestión de items del vault (contraseñas y secretos).
 

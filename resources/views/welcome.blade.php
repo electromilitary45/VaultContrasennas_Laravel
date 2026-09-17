@@ -69,7 +69,7 @@
                             <div class="mb-4">
                                 <i class="bi bi-shield-lock-fill text-primary" style="font-size: 5rem;"></i>
                             </div>
-                            <h1 class="display-1 fw-light mb-4">OCIANN Vault</h1>
+                            <h1 class="display-1 fw-light mb-4">PassVault</h1>
                             <p class="lead text-body-secondary mb-5">
                                 Un gestor de contraseñas seguro y open source.<br>
                                 Diseñado con simplicidad y elegancia.
@@ -83,7 +83,7 @@
                                     <span>Bienvenido</span>
                                 </h2>
                                 <p class="text-body-secondary mb-4">
-                                    OCIANN Vault es una aplicación web open source para gestionar contraseñas y secretos de forma segura.
+                                    PassVault es una aplicación web open source para gestionar contraseñas y secretos de forma segura.
                                 </p>
                                 
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -152,7 +152,7 @@
         <footer class="py-4 border-top">
             <div class="container">
                 <div class="text-center text-body-secondary small">
-                    <p class="mb-0">OCIANN Vault - Open Source Password Manager</p>
+                    <p class="mb-0">PassVault - Open Source Password Manager</p>
                 </div>
             </div>
         </footer>

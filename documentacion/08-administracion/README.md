@@ -1,4 +1,4 @@
-# Sistema de Administración - OCIANN Vault
+# Sistema de Administración - PassVault
 
 Documentación del sistema de administración y gestión de usuarios, contenido y configuración.
 

@@ -1,4 +1,4 @@
-# Organizaciones - OCIANN Vault
+# Organizaciones - PassVault
 
 Documentación del módulo de **organizaciones** (tenants) en el modelo SaaS multi-tenant.
 

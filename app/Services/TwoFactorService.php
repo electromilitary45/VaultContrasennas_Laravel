@@ -40,7 +40,7 @@ class TwoFactorService
     public function generateQrCodeUri(User $user, string $secret): string
     {
         $label = $user->email;
-        $issuer = config('app.name', 'OCIANN Vault');
+        $issuer = config('app.name', 'PassVault');
         
         return $this->totpService->generateUri($secret, $label, $issuer);
     }

@@ -69,7 +69,7 @@ class IntegrationsController extends Controller
 
         return response()->json([
             'version' => $version,
-            'name' => 'OCIANN Vault',
+            'name' => 'PassVault',
             'download_url' => $downloadUrl,
             'integrations_url' => $baseUrl . '/integrations',
         ]);
@@ -88,7 +88,7 @@ class IntegrationsController extends Controller
 
         $vaultBaseUrl = rtrim($request->getSchemeAndHttpHost(), '/');
 
-        $zipPath = storage_path('app/ociann-vault-extension-' . uniqid('', true) . '.zip');
+        $zipPath = storage_path('app/passvault-extension-' . uniqid('', true) . '.zip');
         $zip = new ZipArchive();
         if ($zip->open($zipPath, ZipArchive::CREATE | ZipArchive::OVERWRITE) !== true) {
             abort(500, 'No se pudo crear el archivo de descarga.');
@@ -98,7 +98,7 @@ class IntegrationsController extends Controller
         $this->addDirectoryToZip($zip, $sourceDir, $sourceDir, $exclude, $vaultBaseUrl);
         $zip->close();
 
-        $filename = 'ociann-vault-extension.zip';
+        $filename = 'passvault-extension.zip';
 
         return response()->download($zipPath, $filename, [
             'Content-Type' => 'application/zip',

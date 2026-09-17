@@ -8,7 +8,7 @@
 
     <div class="container-fluid px-4">
         <p class="text-body-secondary mb-4">
-            Conecta OCIANN Vault con otras herramientas. La extensión de navegador te permite acceder al vault desde cualquier página.
+            Conecta PassVault con otras herramientas. La extensión de navegador te permite acceder al vault desde cualquier página.
         </p>
 
         <div class="row g-4">

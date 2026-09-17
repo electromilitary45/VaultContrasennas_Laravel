@@ -1,6 +1,6 @@
 ﻿# Plan de implementación por fases — SaaS Multi-Tenant
 
-Plan incremental para convertir OCIANN Vault en multi-tenant. Cada fase es **probable visual y funcionalmente** antes de seguir.
+Plan incremental para convertir PassVault en multi-tenant. Cada fase es **probable visual y funcionalmente** antes de seguir.
 
 **Reglas:** `.cursor/rules/code-standards.md`, `design-rules.md`, `documentation-rules.md`. Sin CSS/SCSS personalizado; solo Bootstrap. Logs de auditoría en acciones importantes. Revisión de integración al cerrar cada fase.
 

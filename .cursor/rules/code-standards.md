@@ -1,4 +1,4 @@
-# Reglas de Código - OCIANN Vault
+# Reglas de Código - PassVault
 
 ## Principios Fundamentales
 

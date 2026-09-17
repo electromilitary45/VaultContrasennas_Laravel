@@ -1,4 +1,4 @@
-# Sistema de Grupos - OCIANN Vault
+# Sistema de Grupos - PassVault
 
 Documentación del sistema de grupos para colaboración y compartición de items del vault.
 

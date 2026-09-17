@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "OCIANN Vault",
+  "name": "PassVault",
   "version": "1.0.0",
-  "description": "Acceso rápido a tu vault OCIANN: copiar credenciales y autocompletar en formularios.",
+  "description": "Acceso rápido a tu vault PassVault: copiar credenciales y autocompletar en formularios.",
   "permissions": [
     "storage",
     "activeTab"
@@ -14,7 +14,7 @@
   ],
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "OCIANN Vault"
+    "default_title": "PassVault"
   },
   "content_scripts": [
     {
