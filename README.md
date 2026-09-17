@@ -1,4 +1,4 @@
-# PassVault
+# PassVault 
 
 > Open Source Password Vault - Un gestor de contraseñas seguro y open source
 
@@ -10,7 +10,7 @@
 
 ## 📋 Descripción
 
-PassVault es una aplicación web open source para gestionar contraseñas y secretos de forma segura. Diseñada con Laravel y siguiendo principios de seguridad por diseño, permite organizar, compartir y auditar accesos a credenciales de manera eficiente.
+**PassVault** es una aplicación web open source para gestionar contraseñas y secretos de forma segura. Diseñada con Laravel y siguiendo principios de seguridad por diseño, permite organizar, compartir y auditar accesos a credenciales de manera eficiente.
 
 ## ✨ Características Principales
 
