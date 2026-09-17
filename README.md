@@ -339,8 +339,7 @@ Las contribuciones son bienvenidas. Por favor:
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
 ## 👥 Autores
-- **Derek** - *Derek Sebastian Leiva Villalobos*
-- **Tu Nombre** - *Derek Sebastian Leiva Villalobos*
+- *Derek Sebastian Leiva Villalobos*
 
 ## 🙏 Agradecimientos
 
