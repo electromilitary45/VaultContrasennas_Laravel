@@ -1,0 +1,119 @@
+---
+const milestones = [
+  {
+    phase: 'MVP Core',
+    status: 'completed',
+    items: [
+      { text: 'Autenticación completa', done: true },
+      { text: 'CRUD de Vault Items', done: true },
+      { text: 'Cifrado de secretos (AES-256)', done: true },
+      { text: 'Compartición usuarios y grupos', done: true },
+      { text: 'Sistema de auditoría', done: true },
+      { text: 'SaaS Multi-Tenant', done: true },
+    ],
+  },
+  {
+    phase: 'Seguridad',
+    status: 'current',
+    items: [
+      { text: 'Rate limiting', done: false },
+      { text: 'Detección de contraseñas comprometidas', done: false },
+      { text: 'Política de contraseñas fuerte', done: false },
+      { text: 'Backup/Restore', done: false },
+    ],
+  },
+  {
+    phase: 'Integraciones',
+    status: 'upcoming',
+    items: [
+      { text: 'Importación/Exportación', done: false },
+      { text: 'API REST', done: false },
+      { text: 'Extensión de navegador (Chrome)', done: true },
+      { text: 'Extensión Firefox', done: false },
+    ],
+  },
+  {
+    phase: 'Premium',
+    status: 'upcoming',
+    items: [
+      { text: 'Aplicación móvil', done: false },
+      { text: 'Funcionalidades premium', done: false },
+      { text: 'Colaboración avanzada', done: false },
+    ],
+  },
+];
+---
+
+<section id="roadmap" class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <span class="gradient-text">Roadmap</span> del proyecto
+      </h2>
+      <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        Visión a futuro de PassVault. Funcionalidades planificadas y objetivos.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {milestones.map((milestone, index) => (
+        <div class="relative">
+          <!-- Connector -->
+          {index < milestones.length - 1 && (
+            <div class="hidden lg:block absolute top-8 left-full w-full h-px bg-slate-300 dark:bg-slate-700 z-0"></div>
+          )}
+
+          <div class={`relative p-6 rounded-2xl border ${
+            milestone.status === 'completed'
+              ? 'bg-green-50 dark:bg-green-500/5 border-green-200 dark:border-green-500/20'
+              : milestone.status === 'current'
+              ? 'bg-brand-50 dark:bg-brand-500/5 border-brand-200 dark:border-brand-500/20 glow'
+              : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800'
+          }`}>
+            <!-- Status badge -->
+            <div class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium mb-4 ${
+              milestone.status === 'completed'
+                ? 'bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-300'
+                : milestone.status === 'current'
+                ? 'bg-brand-100 dark:bg-brand-500/20 text-brand-700 dark:text-brand-300'
+                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+            }`}>
+              {milestone.status === 'completed' && (
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+              {milestone.status === 'current' && (
+                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+              )}
+              {milestone.status === 'completed' ? 'Completado' : milestone.status === 'current' ? 'En progreso' : 'Próximo'}
+            </div>
+
+            <h3 class="font-semibold text-lg mb-4">{milestone.phase}</h3>
+
+            <ul class="space-y-2">
+              {milestone.items.map((item) => (
+                <li class="flex items-start gap-2 text-sm">
+                  {item.done ? (
+                    <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  ) : (
+                    <svg class="w-4 h-4 text-slate-400 dark:text-slate-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  )}
+                  <span class={item.done ? 'text-slate-500 dark:text-slate-500 line-through' : ''}>
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

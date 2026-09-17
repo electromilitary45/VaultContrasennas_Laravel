@@ -1,0 +1,25 @@
+---
+const technologies = [
+  { name: 'Laravel 12', color: 'text-red-500', bg: 'bg-red-500/10' },
+  { name: 'PHP 8.2+', color: 'text-purple-500', bg: 'bg-purple-500/10' },
+  { name: 'MySQL 8.0', color: 'text-blue-500', bg: 'bg-blue-500/10' },
+  { name: 'Bootstrap 5', color: 'text-purple-600', bg: 'bg-purple-600/10' },
+  { name: 'Vite', color: 'text-yellow-500', bg: 'bg-yellow-500/10' },
+  { name: 'Alpine.js', color: 'text-teal-500', bg: 'bg-teal-500/10' },
+  { name: 'Tailwind CSS', color: 'text-cyan-500', bg: 'bg-cyan-500/10' },
+  { name: 'Reverb', color: 'text-green-500', bg: 'bg-green-500/10' },
+];
+---
+
+<section class="py-16 px-6 border-y border-slate-200/50 dark:border-slate-800/50">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-center text-sm text-slate-500 dark:text-slate-500 mb-8">Construido con tecnología de vanguardia</p>
+    <div class="flex flex-wrap items-center justify-center gap-4">
+      {technologies.map((tech) => (
+        <div class={`px-4 py-2 rounded-lg ${tech.bg} border border-slate-200/50 dark:border-slate-700/50`}>
+          <span class={`text-sm font-medium ${tech.color}`}>{tech.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

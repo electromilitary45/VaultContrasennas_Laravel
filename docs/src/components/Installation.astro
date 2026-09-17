@@ -1,0 +1,103 @@
+---
+const steps = [
+  {
+    step: 1,
+    title: 'Clonar el repositorio',
+    commands: ['git clone https://github.com/electromilitary45/VaultContrasennas_Laravel.git', 'cd VaultContrasennas_Laravel'],
+  },
+  {
+    step: 2,
+    title: 'Instalar dependencias',
+    commands: ['composer install', 'npm install'],
+  },
+  {
+    step: 3,
+    title: 'Configurar entorno',
+    commands: ['cp .env.example .env', 'php artisan key:generate'],
+  },
+  {
+    step: 4,
+    title: 'Configurar base de datos',
+    description: 'Edita el archivo .env con tus credenciales de MySQL:',
+    code: `DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=vault_contrasenna
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña`,
+  },
+  {
+    step: 5,
+    title: 'Ejecutar migraciones',
+    commands: ['php artisan migrate'],
+  },
+  {
+    step: 6,
+    title: 'Iniciar servidor',
+    commands: ['composer dev'],
+    description: 'Inicia Laravel, cola, Reverb y Vite en paralelo.',
+  },
+];
+---
+
+<section id="install" class="py-24 px-6 bg-slate-50 dark:bg-slate-900/50">
+  <div class="max-w-4xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        <span class="gradient-text">Instalación</span> en minutos
+      </h2>
+      <p class="text-lg text-slate-600 dark:text-slate-400">
+        Sigue estos pasos para tener PassVault funcionando en tu máquina.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="space-y-6">
+      {steps.map((step) => (
+        <div class="relative pl-12">
+          <!-- Step number -->
+          <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center text-sm font-bold">
+            {step.step}
+          </div>
+
+          <!-- Connector line -->
+          {step.step < steps.length && (
+            <div class="absolute left-4 top-10 w-px h-full bg-slate-300 dark:bg-slate-700"></div>
+          )}
+
+          <div class="pb-6">
+            <h3 class="font-semibold text-lg mb-2">{step.title}</h3>
+            {step.description && (
+              <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">{step.description}</p>
+            )}
+
+            {step.commands && (
+              <div class="bg-slate-900 dark:bg-slate-950 rounded-xl p-4 font-mono text-sm">
+                {step.commands.map((cmd) => (
+                  <div class="flex items-center gap-2">
+                    <span class="text-brand-400">$</span>
+                    <span class="text-green-400">{cmd}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {step.code && (
+              <div class="bg-slate-900 dark:bg-slate-950 rounded-xl p-4 font-mono text-sm overflow-x-auto">
+                <pre class="text-slate-300">{step.code}</pre>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Note -->
+    <div class="mt-8 p-4 rounded-xl bg-brand-50 dark:bg-brand-500/10 border border-brand-200 dark:border-brand-500/20">
+      <p class="text-sm text-brand-700 dark:text-brand-300">
+        <strong>Nota:</strong> La aplicación estará disponible en <code class="bg-brand-100 dark:bg-brand-500/20 px-1.5 py-0.5 rounded">http://localhost:8000</code>
+      </p>
+    </div>
+  </div>
+</section>

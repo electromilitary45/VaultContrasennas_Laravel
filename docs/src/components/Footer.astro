@@ -1,0 +1,37 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="py-12 px-6 border-t border-slate-200/50 dark:border-slate-800/50">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-cyan-500 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <span class="font-semibold">PassVault</span>
+      </div>
+
+      <!-- Links -->
+      <div class="flex items-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+        <a href="https://github.com/electromilitary45/VaultContrasennas_Laravel" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">
+          GitHub
+        </a>
+        <a href="https://github.com/electromilitary45/VaultContrasennas_Laravel/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors">
+          MIT License
+        </a>
+        <a href="https://github.com/electromilitary45/VaultContrasennas_Laravel#-contribuir" class="hover:text-brand-500 transition-colors">
+          Contribuir
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-sm text-slate-500 dark:text-slate-500">
+        &copy; {year} Derek Sebastian Leiva Villalobos
+      </p>
+    </div>
+  </div>
+</footer>
